@@ -22,47 +22,32 @@ class ViewController: UIViewController {
     //Выполняем необходимую операцию
     func checkOperationAndCalculate(sign:String, firstNumber: Double, secondNumber:Double) -> Double
     {
-        switch sign {
+        switch sign
+        {
+            // Выполняем функцию суммирования
         case "+":
-            return sum(firstNumber: firstNumber, secondNumber: secondNumber);
+            return firstNumber + secondNumber;
+            // Выполняем функцию вычитания
         case "-":
-            return 減算(firstNumber: firstNumber, secondNumber: secondNumber);
+            return firstNumber - secondNumber;
+            // Выполняем функцию деления
         case "/":
-            return divide(firstNumber: firstNumber, secondNumber: secondNumber);
+            return firstNumber / secondNumber;
+            // Выполняем функцию умножения
         case "*":
-            return multiple(firstNumber: firstNumber, secondNumber: secondNumber);
+            return firstNumber * secondNumber;
+            // Вычисляем процент от числа
         case "%":
-            return percent(number: firstNumber, percent: secondNumber);
+            return getPercent(number: firstNumber, percent: secondNumber);
         default:
             return 0;
         }
     }
     
-    // Выполняем функцию суммирования
-    func sum (firstNumber: Double, secondNumber: Double) -> Double
-    {
-        return firstNumber + secondNumber;
-    }
-    // Выполняем функцию деления
-    func divide (firstNumber: Double, secondNumber: Double) -> Double
-    {
-        return firstNumber / secondNumber;
-    }
-    // Выполняем функцию умножения
-    func multiple (firstNumber: Double, secondNumber: Double) -> Double
-    {
-        return firstNumber * secondNumber;
-    }
-    // Выполняем функцию вычитания (гензан)
-    func 減算 (firstNumber: Double, secondNumber: Double) -> Double
-    {
-        return firstNumber - secondNumber;
-    }
     // Вычисляем процент от числа
-    func percent(number: Double, percent: Double) -> Double
+    func getPercent(number: Double, percent: Double) -> Double
     {
         return (number * percent) / 100;
     }
-
 }
 
