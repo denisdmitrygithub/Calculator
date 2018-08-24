@@ -12,14 +12,50 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //Выполняем необходимую операцию
+    func checkOperationAndCalculate(sign:String, firstNumber: Double, secondNumber:Double) -> Double
+    {
+        switch sign {
+        case "+":
+            return sum(firstNumber: firstNumber, secondNumber: secondNumber);
+        case "-":
+            return 減算(firstNumber: firstNumber, secondNumber: secondNumber);
+        case "/":
+            return divide(firstNumber: firstNumber, secondNumber: secondNumber);
+        case "*":
+            return  multiple(firstNumber: firstNumber, secondNumber: secondNumber);
+        default:
+            return 0;
+        }
+    }
+    
+    // Выполняем функцию суммирования
+    func sum (firstNumber: Double, secondNumber: Double) -> Double
+    {
+        return firstNumber + secondNumber;
+    }
+    // Выполняем функцию деления
+    func divide (firstNumber: Double, secondNumber: Double) -> Double
+    {
+        return firstNumber / secondNumber;
+    }
+    // Выполняем функцию умножения
+    func multiple (firstNumber: Double, secondNumber: Double) -> Double
+    {
+        return firstNumber * secondNumber;
+    }
+    // Выполняем функцию вычитания
+    func 減算 (firstNumber: Double, secondNumber: Double) -> Double
+    {
+        return firstNumber - secondNumber;
+    }
 
 }
 
