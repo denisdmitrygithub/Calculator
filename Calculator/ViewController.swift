@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     {
         return firstNumber * secondNumber;
     }
-    // Выполняем функцию вычитания
+    // Выполняем функцию вычитания (гензан)
     func 減算 (firstNumber: Double, secondNumber: Double) -> Double
     {
         return firstNumber - secondNumber;
