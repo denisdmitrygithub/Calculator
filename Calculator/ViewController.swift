@@ -30,7 +30,9 @@ class ViewController: UIViewController {
         case "/":
             return divide(firstNumber: firstNumber, secondNumber: secondNumber);
         case "*":
-            return  multiple(firstNumber: firstNumber, secondNumber: secondNumber);
+            return multiple(firstNumber: firstNumber, secondNumber: secondNumber);
+        case "%":
+            return percent(firstNumber: firstNumber, secondNumber: secondNumber);
         default:
             return 0;
         }
@@ -55,6 +57,11 @@ class ViewController: UIViewController {
     func 減算 (firstNumber: Double, secondNumber: Double) -> Double
     {
         return firstNumber - secondNumber;
+    }
+    // Вычисляем процент от числа
+    func percent(firstNumber: Double, secondNumber: Double) -> Double
+    {
+        return firstNumber * secondNumber / 100;
     }
 
 }
